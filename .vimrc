@@ -1,15 +1,31 @@
 " General appearance
 set number
 colorscheme molokai
-set modeline
-set ls=2
+set modelines=0
+set statusline=[%01.2n]\ %f\ %y\ %m%r%h%=Line\:\ %00001.4l/%00001.4L\ (%001.3p%%)\ \ Col\:\ %0001.3c
+set laststatus=2
+set enc=utf-8
+set bg=dark
+set visualbell
+set cmdheight=2
+set showcmd
 
 " Functionality
 set pastetoggle=<F2>
+set nocompatible
+set relativenumber
+if has("mouse")
+	set mouse=v
+endif
+set wildmenu
+set wildmode=full
+set wildignore=*.o,*.ogj,*.exe,*.dmg,*.app,*.zip,*.tar,*.gz,*.tgz,*.jpg,*.gif,*.png,*.jpeg
+set backspace=indent,eol,start whichwrap+=<,>,[,]
+vnoremap <BS> d
+autocmd BufEnter * lcd %:p:h
 
 " Syntax setup
 set showmatch
-set syntax=perl
 syntax enable
 
 " Indentation
@@ -20,14 +36,20 @@ set smarttab
 set smartindent
 set autoindent
 set nowrap
-"set foldmethod=indent
 
 " Fix VI's pedantic search
 set ignorecase
 set smartcase
 
-" Remap F1 (how did I never think of this?
+" Plugins
+call pathogen#infect('plugins')
+
+" Remaps
+" Stupid F1 (how did I never think of this?)
 map <F1> <Esc>
 imap <F1> <Esc>
+
+map <C-n> :set invnu<CR>
+
 
 

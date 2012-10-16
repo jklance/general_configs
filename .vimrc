@@ -13,18 +13,22 @@ set showcmd
 " Functionality
 set pastetoggle=<F2>
 if has("mouse")
-	set mouse=v
+    set mouse=v
 endif
 set wildmenu
 set wildmode=full
 set wildignore=*.o,*.ogj,*.exe,*.dmg,*.app,*.zip,*.tar,*.gz,*.tgz,*.jpg,*.gif,*.png,*.jpeg
 set backspace=indent,eol,start whichwrap+=<,>,[,]
 vnoremap <BS> d
-autocmd BufEnter * lcd %:p:h
-
 if version >= 730
-	set nocompatible
-	set relativenumber
+    set nocompatible
+    set relativenumber
+endif
+
+" Autocommand
+if has("autocmd") 
+    au BufReadPost * if &modifiable | retab | endif 
+    au BufEnter * lcd %:p:h
 endif
 
 " Syntax setup
@@ -35,6 +39,7 @@ syntax enable
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+set expandtab
 set smarttab
 set smartindent
 set autoindent

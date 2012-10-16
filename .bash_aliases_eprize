@@ -1,0 +1,26 @@
+# ePrize Specific Aliases
+
+# Servers
+alias portal='ssh jeremy-lance@portal.int.eprize.net'
+alias promodev='ssh jeremy-lance@tbx2-promodev.int.eprize.net'
+alias promotest='ssh jeremy-lance@t0core-log01.int.eprize.net'
+alias db-live='ssh jeremy-lance@c0sup-rep01'
+alias xlrdev='ssh jeremy-lance@dev.ec2.eprize.net'
+alias xlrlive='ssh jeremy-lance@p1sup-xlr01.int.eprize.net'
+
+# Services
+alias restart-codes='sudo /etc/init.d/codemanager stop && sudo /etc/init.d/codemanager start'
+alias restart-tb='sudo /etc/init.d/toybox stop && sudo /etc/init.d/toybox start'
+alias restart-awe='sudo /etc/init.d/awe stop && sudo /etc/init.d/awe start'
+
+alias pc='promocmd'
+
+
+pgrep() { grep --color --exclude-dir="snapshots" --exclude-dir="COMPILED" --exclude-dir=".hg" -ir "$@" * 2>/dev/null ;}
+apgrep() { grep --color --exclude-dir="snapshots" --exclude-dir="COMPILED" --exclude-dir=".hg" -ir "$@" /www/docs/* 2>/dev/null  ;}
+
+log-awe() { tail -f /var/log/awarding_engine  ;}
+log-err() { tail -f /www/logs/error_log | grep --color $@ | perl -pe 's/.*Flow.*/\e[1;32m$&\e[0m/g || s/.*Error.*/\e[1;33m$&\e[0m/g || s/.*Fatal.*/\e[1;31m$&\e[0m/g || s/.*SQLExecute.*/\e[1;34m$&\e[0m/g' ;}
+log-lerr() { tail -f ~/webroot/logs/poe_error_log | grep --color $@  ;}
+log-msg() { tail -f /var/log/toybox | grep --color $@  ;}
+log-code() { tail -f /www/codes/logs/error_log | grep --color $@  ;}

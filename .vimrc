@@ -12,8 +12,6 @@ set showcmd
 
 " Functionality
 set pastetoggle=<F2>
-set nocompatible
-set relativenumber
 if has("mouse")
 	set mouse=v
 endif
@@ -23,6 +21,11 @@ set wildignore=*.o,*.ogj,*.exe,*.dmg,*.app,*.zip,*.tar,*.gz,*.tgz,*.jpg,*.gif,*.
 set backspace=indent,eol,start whichwrap+=<,>,[,]
 vnoremap <BS> d
 autocmd BufEnter * lcd %:p:h
+
+if version >= 730
+	set nocompatible
+	set relativenumber
+endif
 
 " Syntax setup
 set showmatch

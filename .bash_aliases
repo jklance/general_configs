@@ -15,6 +15,8 @@ alias pcurl='curl -i -X POST'
 
 alias grep='grep --color'
 
+alias glcc='opengl_compile'
+
 # Servers
 alias pwless='ssh-copy-id -i ~/.ssh/id_rsa.pub'
 
@@ -22,4 +24,6 @@ alias pwless='ssh-copy-id -i ~/.ssh/id_rsa.pub'
 alias addSpace="defaults write com.apple.dock persistent-apps -array-add '{\"tile-type\"=\"spacer-tile\";}'"
 
 growl() { echo -e $'\e]9;'${1}'\007' ; return  ; }
+
+opengl_compile() { gcc -o $1 $1.cpp -framework Carbon -framework OpenGL -framework GLUT ;}
 

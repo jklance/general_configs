@@ -1,3 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =3
 let g:netrw_dirhist_1='/home/jeremy-lance/.vpn'
+let g:netrw_dirhist_2='/Users/jer.lance/.eprize_configs/.git'
+let g:netrw_dirhist_3='/Users/jer.lance/Dropbox/School/CIS515-Computer_Graphics/programs/program2'

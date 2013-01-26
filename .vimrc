@@ -2,13 +2,23 @@
 set number
 colorscheme molokai
 set modelines=0
-set statusline=[%01.2n]\ %f\ %y\ %m%r%h%=Line\:\ %00001.4l/%00001.4L\ (%001.3p%%)\ \ Col\:\ %0001.3c
 set laststatus=2
 set enc=utf-8
 set bg=dark
 set visualbell
 set cmdheight=2
 set showcmd
+
+" Statusline
+set statusline=[%01.2n]                                 " buffer number
+set statusline+=\ %#error#%.50F%*                       " file name
+set statusline+=\ [%{&ff}]                              " file format
+set statusline+=\ %y                                    " file type
+set statusline+=\ %m%r%h                                " modified/readonly/helpfile flags
+set statusline+=%=                                      " left/right separator
+set statusline+=Line\:\ %#todo#%00001.4l/%00001.4L%*    " line number/total lines
+set statusline+=\ (%001.3p%%)                           " percent through file
+set statusline+=\ \ Col\:\ %#todo#%0001.3c%*            " cursor column location
 
 " Functionality
 set pastetoggle=<F2>
@@ -20,7 +30,7 @@ set wildmode=full
 set wildignore=*.o,*.ogj,*.exe,*.dmg,*.app,*.zip,*.tar,*.gz,*.tgz,*.jpg,*.gif,*.png,*.jpeg
 set backspace=indent,eol,start whichwrap+=<,>,[,]
 vnoremap <BS> d
-if version >= 730
+if v:version >= 703
     set nocompatible
     set relativenumber
 endif
@@ -58,6 +68,6 @@ map <F1> <Esc>
 imap <F1> <Esc>
 
 map <C-n> :set invnu<CR>
-
+map <C-r> :set relativenumber<CR>
 
 

@@ -1,19 +1,22 @@
 export HISTCONTROL=ignoredups
+export PATH=/opt/toysdk/bin:$PATH
+
+export PATH="$PATH:/usr/local/mysql-5.5.28-osx10.6-x86_64/bin/mysql"
 
 if [ -f "$HOME/.bash_aliases" ]; then
-	. "$HOME/.bash_aliases"
+    . "$HOME/.bash_aliases"
 fi
 
 if [ -f "$HOME/.bash_prompt" ]; then
-	. "$HOME/.bash_prompt"
+    . "$HOME/.bash_prompt"
 fi
 
 if [ -f "$HOME/.bash_aliases_eprize" ]; then
-	. "$HOME/.bash_aliases_eprize"
+    . "$HOME/.bash_aliases_eprize"
 fi
 
 if [ -d "$HOME/bin" ]; then
-	PATH="$HOME/bin:$PATH"
+    PATH="$HOME/bin:$PATH"
 fi
 
 umask 002

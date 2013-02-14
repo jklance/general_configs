@@ -16,9 +16,9 @@ set statusline+=\ [%{&ff}]                              " file format
 set statusline+=\ %y                                    " file type
 set statusline+=\ %m%r%h                                " modified/readonly/helpfile flags
 set statusline+=%=                                      " left/right separator
-set statusline+=Line\:\ %#todo#%00001.4l/%00001.4L%*    " line number/total lines
-set statusline+=\ (%001.3p%%)                           " percent through file
-set statusline+=\ \ Col\:\ %#todo#%0001.3c%*            " cursor column location
+set statusline+=[Line\:\ %#todo#%00001.4l/%00001.4L%*   " line number/total lines
+set statusline+=\ (%001.3p%%)]                          " percent through file
+set statusline+=\ \ [Col\:\ %#todo#%0001.3c%*]          " cursor column location
 
 " Functionality
 set pastetoggle=<F2>

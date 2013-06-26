@@ -27,3 +27,4 @@ growl() { echo -e $'\e]9;'${1}'\007' ; return  ; }
 
 opengl_compile() { gcc -o $1 $1.cpp -framework Carbon -framework OpenGL -framework GLUT ;}
 
+function ttitle() { echo -ne "\033]0;"$@"\007" ;}

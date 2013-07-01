@@ -14,8 +14,8 @@ if [ -f "$HOME/.bash_prompt" ]; then
     . "$HOME/.bash_prompt"
 fi
 
-if [ -f "$HOME/.bash_aliases_eprize" ]; then
-    . "$HOME/.bash_aliases_eprize"
+if [ -f "$HOME/.bash_aliases_work" ]; then
+    . "$HOME/.bash_aliases_work"
 fi
 
 if [ -d "$HOME/bin" ]; then

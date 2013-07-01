@@ -1,5 +1,8 @@
 export HISTCONTROL=ignoredups
 export PATH=/opt/toysdk/bin:$PATH
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
 
 export PATH="$PATH:/usr/local/mysql-5.5.28-osx10.6-x86_64/bin/mysql"
 

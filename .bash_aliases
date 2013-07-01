@@ -1,5 +1,6 @@
 # General linux command fixes
-alias dir='ls --color=auto --format=vertical'
+alias ls='ls -G'
+alias dir='ls --color=auto  --format=vertical'
 alias lls='ls -a1'
 alias lsa='ls -a '
 alias lss='ls -als '

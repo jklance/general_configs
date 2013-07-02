@@ -39,6 +39,9 @@ endif
 if has("autocmd") 
     au BufReadPost * if &modifiable | retab | endif 
     au BufEnter * lcd %:p:h
+
+    " PHP Checking
+    au FileType php noremap <C-P> :w<CR>:!php -l %<CR>
 endif
 
 " Syntax setup

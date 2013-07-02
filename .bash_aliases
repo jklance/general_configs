@@ -22,7 +22,8 @@ alias pcurl='curl -i -X POST'
 
 alias grep='grep --color'
 
-alias glcc='opengl_compile'
+alias xmlcheck='xmllint --format '
+
 
 # Servers
 alias pwless='ssh-copy-id -i ~/.ssh/id_rsa.pub'
@@ -33,5 +34,6 @@ alias addSpace="defaults write com.apple.dock persistent-apps -array-add '{\"til
 growl() { echo -e $'\e]9;'${1}'\007' ; return  ; }
 
 opengl_compile() { gcc -o $1 $1.cpp -framework Carbon -framework OpenGL -framework GLUT ;}
+alias glcc='opengl_compile'
 
 function ttitle() { echo -ne "\033]0;"$@"\007" ;}

@@ -6,6 +6,7 @@ else
     alias ls='ls --color=auto'
 fi
 alias dir='ls --format=vertical'
+alias ll='ls -l'
 alias lls='ls -a1'
 alias lsa='ls -a '
 alias lss='ls -als '

@@ -1,6 +1,11 @@
 # General linux command fixes
-alias ls='ls -G'
-alias dir='ls --color=auto  --format=vertical'
+
+if [ "$OS" == "osx" ]; then
+    alias ls='ls -G'
+else
+    alias ls='ls --color=auto'
+fi
+alias dir='ls --format=vertical'
 alias lls='ls -a1'
 alias lsa='ls -a '
 alias lss='ls -als '

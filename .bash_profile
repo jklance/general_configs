@@ -1,8 +1,18 @@
 export HISTCONTROL=ignoredups
 export PATH=/opt/toysdk/bin:$PATH
-export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
 
+# Get OS
+case "$OSTYPE" in
+    darwin*) OS="osx";;
+    linux*)  OS="linux";;
+    bsd*)    OS="bsd";;
+    *)       OS="other";;
+esac
+
+if [ "$OS" == "osx" ]; then
+    export CLICOLOR=1
+    export LSCOLORS=GxFxCxDxBxegedabagaced
+fi
 
 export PATH="$PATH:/usr/local/mysql-5.5.28-osx10.6-x86_64/bin/mysql"
 

@@ -2,14 +2,15 @@
 
 if [ "$OS" == "osx" ]; then
     alias ls='ls -G'
+    alias lss='ls -Gals'
 else
-    alias ls='ls --color=auto'
+    alias ls='ls --color=auto --group-directories-first'
+    alias lss='ls -als --color=auto --group-directories-first'
 fi
 alias dir='ls --format=vertical'
 alias ll='ls -l'
 alias lls='ls -a1'
 alias lsa='ls -a '
-alias lss='ls -als '
 
 alias vi='vim'
 alias vir='vim -R'

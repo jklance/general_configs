@@ -28,7 +28,7 @@ alias xmlcheck='xmllint --format '
 
 # Servers
 alias do_snails='ssh jer_@192.241.172.169'
-alias do_dhost='ssh jer_@jerlance.com'
+alias dh_cyclops='ssh jer_@jerlance.com'
 alias pwless='ssh-copy-id -i ~/.ssh/id_rsa.pub'
 
 # Local

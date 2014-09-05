@@ -25,6 +25,7 @@ alias grep='grep --color'
 
 alias xmlcheck='xmllint --format '
 
+alias fuck='sudo $(history -p \!\!)'
 
 # Servers
 alias do_snails='ssh jer_@192.241.172.169'

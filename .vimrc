@@ -74,4 +74,6 @@ imap <F1> <Esc>
 map <C-n> :set invnu<CR>
 map <C-m> :set relativenumber<CR>
 
-
+nnoremap / /\v
+cnoremap %s/ %s/\v
+cnoremap s/ s/\v

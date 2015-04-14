@@ -1,11 +1,11 @@
 # General linux command fixes
 
 if [ "$OS" == "osx" ]; then
-    alias ls='ls -G'
-    alias lss='ls -Gals'
+    alias ls='ls -Gh'
+    alias lss='ls -Galsh'
 else
-    alias ls='ls --color=auto --group-directories-first'
-    alias lss='ls -als --color=auto --group-directories-first'
+    alias ls='ls -h --color=auto --group-directories-first'
+    alias lss='ls -alsh --color=auto --group-directories-first'
 fi
 alias dir='ls --format=vertical'
 alias ll='ls -l'

@@ -24,6 +24,7 @@ alias pcurl='curl -i -X POST'
 alias grep='grep --color'
 
 alias xmlcheck='xmllint --format '
+alias slideshow='asciidoc --backend slidy'
 
 alias fuck='sudo $(history -p \!\!)'
 

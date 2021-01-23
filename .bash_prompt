@@ -23,7 +23,7 @@ P_RESET="\[$P_ESCAPE[0m\]";
 
 # Git stuff
 function prompt_git_status {
-      [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo -e '\u26A1' 
+      [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo -e '\u26A1' 
 }
 function prompt_git_branch() {
      git symbolic-ref --short HEAD 2>/dev/null | sed -e "s/.*/\(&$(prompt_git_status)\)\ /"

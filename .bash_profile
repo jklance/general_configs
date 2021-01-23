@@ -53,3 +53,4 @@ fi
 
 umask 002
 stty stop ''
+cd ~

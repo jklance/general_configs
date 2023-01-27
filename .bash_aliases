@@ -33,6 +33,7 @@ alias pwless='ssh-copy-id -i ~/.ssh/id_rsa.pub'
 
 # Git stuff
 alias resetrepo='git fetch upstream; git checkout master; git reset --hard upstream/master; git push origin master --force'
+alias gupdate='git fetch --all; git pull'
 
 # Local
 alias addSpace="defaults write com.apple.dock persistent-apps -array-add '{\"tile-type\"=\"spacer-tile\";}'"
